@@ -51,9 +51,10 @@
                                     HorizontalOptions="FillAndExpand"
                                     Clicked="OnZakupClicked"/>
                             <Button Text="Zwróć"
-                                BackgroundColor="PaleVioletRed"
-                                HorizontalOptions="FillAndExpand"
-                                Grid.Column="1"/>
+                                    Clicked="OnZwrocClicked"
+                                    BackgroundColor="PaleVioletRed"
+                                    HorizontalOptions="FillAndExpand"
+                                    Grid.Column="1"/>
                         </Grid>
                     </VerticalStackLayout>
                 </Frame>

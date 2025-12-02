@@ -31,7 +31,7 @@ namespace SklepInternetowyMAUI
         }
         private async void OnZakupClicked(object sender, EventArgs e)
         {
-            // Produkt powiązany z tym konkretnym przyciskiem 
+            // Produkt powiązany z tym konkretnym przyciskiem do konkretnego produktu
 
             var produkt = (sender as Button)?.BindingContext as Produkt;
 
@@ -47,6 +47,14 @@ namespace SklepInternetowyMAUI
                 await DisplayAlert("Brak produktu", $"Nie można kupić produktu {produkt.Nazwa}.",
                     "OK");
             }
+        }
+
+        private async void OnZwrocClicked(object sender, EventArgs e)
+        {
+            // Produkt powiązany z tym konkretnym przyciskiem do konkretnego produktu
+            var produkt = (sender as Button)?.BindingContext as Produkt;
+
+            produkt.DostepnaIlosc++;
         }
     }
 }
