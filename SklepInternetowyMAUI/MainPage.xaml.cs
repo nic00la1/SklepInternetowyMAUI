@@ -5,7 +5,16 @@ namespace SklepInternetowyMAUI
 {
     public partial class MainPage : ContentPage
     {
+        /// <summary>
+        /// Lista produktów wczytanych z pliku danych.
+        /// </summary>
         public List<Produkt> Produkty { get; set; }
+        
+        /// <summary>
+        /// Konstruktor klasy MainPage.
+        /// Wczytuje dane z pliku "data_store.txt", tworzy listę produktów
+        /// i ustawia kontekst danych (BindingContext) dla powiązań w XAML.
+        /// </summary>
         public MainPage()
         {
             InitializeComponent();
@@ -29,6 +38,15 @@ namespace SklepInternetowyMAUI
 
             BindingContext = this;
         }
+
+        /// <summary>
+        /// Przycisk "Zakup", który odejmuje jedną sztukę od ilości dostępnych sztuk,
+        /// a kiedy osiągnie wartość 0, ma wyświetlić się komunikat ,,Nie można kupić produktu
+        /// {NAZWA_PRODUKTU}."
+        /// </summary>
+        /// <param name="sender">Obiekt, który wywołał zdarzenie.</param>
+        /// <param name="e">Argumenty zdarzenia (tu nieużywane).</param>
+        /// <returns>Brak zwracanej wartości (void).</returns>
         private async void OnZakupClicked(object sender, EventArgs e)
         {
             // Produkt powiązany z tym konkretnym przyciskiem do konkretnego produktu
@@ -49,6 +67,12 @@ namespace SklepInternetowyMAUI
             }
         }
 
+        /// <summary>
+        /// Przycisk "Zwróć" dodaje jedną sztukę do ilości dostępnych sztuk.
+        /// </summary>
+        /// <param name="sender">Obiekt, który wywołał zdarzenie.</param>
+        /// <param name="e">Argumenty zdarzenia (tu nieużywane).</param>
+        /// <returns>Brak zwracanej wartości (void).</returns>
         private async void OnZwrocClicked(object sender, EventArgs e)
         {
             // Produkt powiązany z tym konkretnym przyciskiem do konkretnego produktu
