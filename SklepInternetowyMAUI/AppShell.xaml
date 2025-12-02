@@ -4,10 +4,10 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:SklepInternetowyMAUI"
-    Title="SklepInternetowyMAUI">
+    Title="Sklep komputerowy">
 
     <ShellContent
-        Title="Home"
+        Title="Sklep komputerowy"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
 
