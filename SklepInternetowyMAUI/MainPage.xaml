@@ -3,51 +3,50 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SklepInternetowyMAUI.MainPage">
 
-    <ScrollView>
-        <VerticalStackLayout
-            Padding="30,0"
-            Spacing="25">
-            <Frame CornerRadius="10" BorderColor="Gray">
-                <VerticalStackLayout>
-                    <Image Source="dotnet_bot.png"/>
-                    <Label Text="Laptop Dell XPS 13"
+    <CollectionView ItemsSource="{Binding Produkty}">
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Frame CornerRadius="10" BorderColor="Gray">
+                    <VerticalStackLayout>
+                        <Image Source="{Binding Obrazek}"/>
+                        <Label Text="Laptop Dell XPS 13"
                            FontSize="24"
                            FontAttributes="Bold"
                            HorizontalOptions="Center"
                            Margin="0,0,0,20"/>
-                    <Label Text="Kategoria: Laptopy"/>
-                    <HorizontalStackLayout>
-                        <!-- Tekst opisowy -->
-                        <Label Text="Cena:"
-                               TextColor="Black"/>
-                        
-                        <!-- Wartość wyróżniona -->
-                        <Label Text=" 4 999,00 zł"
-                               FontAttributes="Bold"/>
-                    </HorizontalStackLayout>
-                    <HorizontalStackLayout>
-                        <!-- Tekst opisowy -->
-                        <Label Text="Dostępna ilość w magazynie:"
+                        <Label Text="Kategoria: Laptopy"/>
+                        <HorizontalStackLayout>
+                            <!-- Tekst opisowy -->
+                            <Label Text="Cena:"
                                TextColor="Black"/>
 
-                        <!-- Wartość wyróżniona -->
-                        <Label Text=" 0"
+                            <!-- Wartość wyróżniona -->
+                            <Label Text=" 4 999,00 zł"
                                FontAttributes="Bold"/>
-                    </HorizontalStackLayout>
-                    <Grid Margin="0, 20, 0,0"
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout>
+                            <!-- Tekst opisowy -->
+                            <Label Text="Dostępna ilość w magazynie:"
+                               TextColor="Black"/>
+
+                            <!-- Wartość wyróżniona -->
+                            <Label Text=" 0"
+                               FontAttributes="Bold"/>
+                        </HorizontalStackLayout>
+                        <Grid Margin="0, 20, 0,0"
                           ColumnDefinitions="*,*"
                           ColumnSpacing="10">
-                        <Button Text="Zakup"
+                            <Button Text="Zakup"
                                 BackgroundColor="Green"
                                 HorizontalOptions="FillAndExpand"/>
-                        <Button Text="Zwróć"
+                            <Button Text="Zwróć"
                                 BackgroundColor="PaleVioletRed"
                                 HorizontalOptions="FillAndExpand"
                                 Grid.Column="1"/>
-                    </Grid>
-                </VerticalStackLayout>
-            </Frame>
-        </VerticalStackLayout>
-    </ScrollView>
-
+                        </Grid>
+                    </VerticalStackLayout>
+                </Frame>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
 </ContentPage>
