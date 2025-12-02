@@ -13,11 +13,19 @@
                     <Label Text="Laptop Dell XPS 13"/>
                     <Label Text="Kategoria: Laptopy"/>
                     <Label Text="Dostępna ilość w magazynie: 0"/>
-                    <HorizontalStackLayout>
+                    <Grid ColumnDefinitions="*,*"
+                          ColumnSpacing="10">
                         <Button Text="Zakup"
-                                BackgroundColor="Green"/>
+                                BackgroundColor="Green"
+                                HorizontalOptions="FillAndExpand"/>     
                         <Button Text="Zwróć"
-                                BackgroundColor="PaleVioletRed"/>
+                                BackgroundColor="PaleVioletRed"
+                                HorizontalOptions="FillAndExpand"
+                                Grid.Column="1"/>
+                    </Grid>
+                    <HorizontalStackLayout Spacing="10">
+                        
+                       
                     </HorizontalStackLayout>
                 </VerticalStackLayout>
             </Frame>
