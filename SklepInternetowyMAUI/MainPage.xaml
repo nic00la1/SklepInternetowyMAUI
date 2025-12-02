@@ -3,35 +3,46 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SklepInternetowyMAUI.MainPage">
 
-    <CollectionView ItemsSource="{Binding Produkty}">
+    <CollectionView ItemsSource="{Binding Produkty}" Margin="20">
         <CollectionView.ItemTemplate>
             <DataTemplate>
                 <Frame CornerRadius="10" BorderColor="Gray">
                     <VerticalStackLayout>
                         <Image Source="{Binding Obrazek}"/>
-                        <Label Text="Laptop Dell XPS 13"
+                        <Label Text="{Binding Nazwa}"
                            FontSize="24"
                            FontAttributes="Bold"
                            HorizontalOptions="Center"
                            Margin="0,0,0,20"/>
-                        <Label Text="Kategoria: Laptopy"/>
                         <HorizontalStackLayout>
-                            <!-- Tekst opisowy -->
-                            <Label Text="Cena:"
-                               TextColor="Black"/>
+                            <!-- Tekst opisowy - Cena -->
+                            <Label Text="Kategoria: "
+                                   TextColor="Black"/>
 
                             <!-- Wartość wyróżniona -->
-                            <Label Text=" 4 999,00 zł"
-                               FontAttributes="Bold"/>
+                            <Label Text="{Binding Kategoria}"
+                                   FontAttributes="Bold"
+                                   Margin="8,0"/>
                         </HorizontalStackLayout>
                         <HorizontalStackLayout>
-                            <!-- Tekst opisowy -->
-                            <Label Text="Dostępna ilość w magazynie:"
-                               TextColor="Black"/>
+                            <!-- Tekst opisowy - Cena -->
+                            <Label Text="Cena: "
+                                   TextColor="Black"/>
 
                             <!-- Wartość wyróżniona -->
-                            <Label Text=" 0"
-                               FontAttributes="Bold"/>
+                            <Label Text="{Binding Cena, StringFormat='{0} zł'}}"
+                                   FontAttributes="Bold"
+                                   Margin="8,0"/>
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout>
+                            <!-- Tekst opisowy Dostępna ilość -->
+                            <Label Text="Dostępna ilość w magazynie: "
+                                   TextColor="Black"/>
+
+                            <!-- Wartość wyróżniona -->
+                            <Label Text="{Binding DostepnaIlosc}"
+                                   FontAttributes="Bold"
+                                   Margin="8,0"/>
                         </HorizontalStackLayout>
                         <Grid Margin="0, 20, 0,0"
                           ColumnDefinitions="*,*"
