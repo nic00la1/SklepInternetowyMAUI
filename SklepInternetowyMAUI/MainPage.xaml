@@ -7,7 +7,20 @@
         <VerticalStackLayout
             Padding="30,0"
             Spacing="25">
-            
+            <Frame CornerRadius="10" BorderColor="Gray">
+                <VerticalStackLayout>
+                    <Image Source="dotnet_bot.png"/>
+                    <Label Text="Laptop Dell XPS 13"/>
+                    <Label Text="Kategoria: Laptopy"/>
+                    <Label Text="Dostępna ilość w magazynie: 0"/>
+                    <HorizontalStackLayout>
+                        <Button Text="Zakup"
+                                BackgroundColor="Green"/>
+                        <Button Text="Zwróć"
+                                BackgroundColor="PaleVioletRed"/>
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </Frame>
         </VerticalStackLayout>
     </ScrollView>
 
