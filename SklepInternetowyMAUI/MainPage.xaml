@@ -21,7 +21,6 @@
 
                             <!-- Wartość wyróżniona -->
                             <Label Text="{Binding Kategoria}"
-                                   FontAttributes="Bold"
                                    Margin="8,0"/>
                         </HorizontalStackLayout>
                         <HorizontalStackLayout>
@@ -30,7 +29,7 @@
                                    TextColor="Black"/>
 
                             <!-- Wartość wyróżniona -->
-                            <Label Text="{Binding Cena, StringFormat='{0} zł'}}"
+                            <Label Text="{Binding Cena, StringFormat='{0:F2} zł'}}"
                                    FontAttributes="Bold"
                                    Margin="8,0"/>
                         </HorizontalStackLayout>
