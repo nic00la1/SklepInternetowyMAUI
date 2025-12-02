@@ -16,8 +16,24 @@
                            HorizontalOptions="Center"
                            Margin="0,0,0,20"/>
                     <Label Text="Kategoria: Laptopy"/>
-                    <Label Text="Cena: 4 999,00 zł"/>
-                    <Label Text="Dostępna ilość w magazynie: 0"/>
+                    <HorizontalStackLayout>
+                        <!-- Tekst opisowy -->
+                        <Label Text="Cena:"
+                               TextColor="Black"/>
+                        
+                        <!-- Wartość wyróżniona -->
+                        <Label Text=" 4 999,00 zł"
+                               FontAttributes="Bold"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <!-- Tekst opisowy -->
+                        <Label Text="Dostępna ilość w magazynie:"
+                               TextColor="Black"/>
+
+                        <!-- Wartość wyróżniona -->
+                        <Label Text=" 0"
+                               FontAttributes="Bold"/>
+                    </HorizontalStackLayout>
                     <Grid Margin="0, 20, 0,0"
                           ColumnDefinitions="*,*"
                           ColumnSpacing="10">
