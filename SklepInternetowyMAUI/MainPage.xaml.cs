@@ -1,4 +1,5 @@
 ﻿using SklepInternetowyMAUI.Classes;
+using System.Threading.Tasks;
 
 namespace SklepInternetowyMAUI
 {
@@ -27,6 +28,25 @@ namespace SklepInternetowyMAUI
                 .ToList();
 
             BindingContext = this;
+        }
+        private async void OnZakupClicked(object sender, EventArgs e)
+        {
+            // Produkt powiązany z tym konkretnym przyciskiem 
+
+            var produkt = (sender as Button)?.BindingContext as Produkt;
+
+            if (produkt == null) return; // Jeśli nie ma takiego produktu 
+
+            if (produkt.DostepnaIlosc > 0) // Jeśli liczba dostępnych sztuk produktu jest wieksza od zera
+            {
+                produkt.DostepnaIlosc--;
+            }
+
+            else 
+            {
+                await DisplayAlert("Brak produktu", $"Nie można kupić produktu {produkt.Nazwa}.",
+                    "OK");
+            }
         }
     }
 }
